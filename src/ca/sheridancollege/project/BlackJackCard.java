@@ -40,15 +40,16 @@ public class BlackJackCard extends Card {
             case ACE:
                 java.util.Scanner input = new java.util.Scanner(System.in);
                 System.out.println("would you like this Ace to be worth 1 or 11?");
-                int choice = input.nextInt();
-                while (choice > 1 && choice < 1 || choice > 11 && choice < 11) {
+                while (true) {
+                    int choice = input.nextInt();
+                    if (choice == 11) {
+                        realValue = 11;
+                        break;
+                    } else if (choice == 1) {
+                        realValue = 1;
+                        break;
+                    }
                     System.out.println("Input valid answer");
-                    choice = input.nextInt();
-                }
-                if (choice == 11) {
-                    realValue = 11;
-                } else {
-                    realValue = 1;
                 }
                 break;
             case KING:
