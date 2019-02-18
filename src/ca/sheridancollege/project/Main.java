@@ -23,12 +23,12 @@ public class Main {
             playerTotal = input.nextInt();
         }
 
-        ArrayList<BlackJackPlayer> players = new ArrayList(playerTotal);
+        ArrayList<BlackJackPlayer> players = new ArrayList();
         String[] playerNames = new String[playerTotal];
 
         System.out.println("Enter player names");
         for (int i = 0; i < playerTotal; i++) {
-            ArrayList<BlackJackCard> hand = new ArrayList(0);
+            ArrayList<BlackJackCard> hand = new ArrayList();
             System.out.println("Enter name for player " + (i + 1));
             playerNames[i] = input.next();
             players.add(new BlackJackPlayer(playerNames[i], hand));
