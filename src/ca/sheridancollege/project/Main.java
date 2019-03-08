@@ -3,11 +3,15 @@ package ca.sheridancollege.project;
 import java.util.ArrayList;
 
 /**
- *
+ * The main class in the Black Jack Card game program used to gather initial
+ * requirements to play the game
  * @author Nicholas Di Pietrantonio, 2019
  */
 public class Main {
-
+    /**
+     * 
+     * @param args main method in the program
+     */
     public static void main(String[] args) {
 
         java.util.Scanner input = new java.util.Scanner(System.in);

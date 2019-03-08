@@ -4,20 +4,31 @@ import java.util.ArrayList;
 import java.util.Collections;
 
 /**
- *
+ * Class extends Game and is used to model a game of blackjack once
+ * all information on players is created, and the deck is created/inputed
  * @author Nicholas Di Pietrantonio, 2019
  */
 public class BlackJackGame extends Game {
 
+    //data fields
     private GroupOfCards groupOfCards;
     ArrayList<BlackJackPlayer> players;
 
+    /**
+     * two arg constructor that represents a game of blackjack with all players
+     * and deck ready
+     * @param players who are playing blackjack
+     * @param groupOfCards the deck of cards that is being used
+     */
     public BlackJackGame(ArrayList<BlackJackPlayer> players, GroupOfCards groupOfCards) {
         super("BlackJack", players);
         this.players = players;
         this.groupOfCards = groupOfCards;
     }
 
+    /**
+     * overriden play method that is used to play the game of blackjack
+     */
     @Override
     public void play() {
         int i = 0;
@@ -72,6 +83,10 @@ public class BlackJackGame extends Game {
         }
     }
 
+    /**
+     * overriden declareWinner method that is used to find the winner and 
+     * declare the winner
+     */
     @Override
     public void declareWinner() {
         if (players.size() == 1) {

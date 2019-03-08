@@ -13,6 +13,7 @@ import java.util.Collections;
  * might want to subclass this more than once. The group of cards has a maximum
  * size attribute which is flexible for reuse.
  *
+ * @author dancye, 2018
  * @author Nicholas Di Pietrantonio, 2019
  */
 public class GroupOfCards {

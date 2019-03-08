@@ -1,11 +1,12 @@
 package ca.sheridancollege.project;
 
 /**
- *
+ * Class is sued to represent a standard card with a suit and value
  * @author Nicholas Di Pietrantonio, 2019
  */
 public class BlackJackCard extends Card {
 
+    // enums to represent different values of cards
     public enum Suits {
         SPADES, HEARTS, CLUBS, DIAMONDS
     };
@@ -14,10 +15,16 @@ public class BlackJackCard extends Card {
         ACE, TWO, THREE, FOUR, FIVE, SIX, SEVEN, EIGHT, NINE,
         TEN, JACK, QUEEN, KING
     };
+    //data fields
     private final Suits suits;
     private final Value value;
     private int realValue;
 
+    /**
+     * two arg constructor that is used to model a standard card
+     * @param suits Hearts, Spades, Clubs etc
+     * @param value Ace King Ten Queen etc
+     */
     public BlackJackCard(Suits suits, Value value) {
         this.suits = suits;
         this.value = value;
@@ -35,6 +42,9 @@ public class BlackJackCard extends Card {
         return realValue;
     }
 
+    /**
+     * method is used to determine the value in points of a card (King = 10 etc)
+     */
     public void showRealValue() {
         switch (value) {
             case ACE:
@@ -91,6 +101,10 @@ public class BlackJackCard extends Card {
         }
     }
 
+    /**
+     * overriden toString method to return the card values
+     * @return card value(king) and suit(hearts)
+     */
     @Override
     public String toString() {
         return value + " of " + suits;
