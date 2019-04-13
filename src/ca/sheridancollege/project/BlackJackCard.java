@@ -15,6 +15,8 @@ public class BlackJackCard extends Card {
         ACE, TWO, THREE, FOUR, FIVE, SIX, SEVEN, EIGHT, NINE,
         TEN, JACK, QUEEN, KING
     };
+
+    
     //data fields
     private final Suits suits;
     private final Value value;
@@ -29,7 +31,11 @@ public class BlackJackCard extends Card {
         this.suits = suits;
         this.value = value;
     }
-
+    
+    public void setRealValue(int realValue) {
+        this.realValue = realValue;
+    }
+    
     public Value getValue() {
         return value;
     }
@@ -53,50 +59,50 @@ public class BlackJackCard extends Card {
                 while (true) {
                     int choice = input.nextInt();
                     if (choice == 11) {
-                        realValue = 11;
+                        setRealValue(11);
                         break;
                     } else if (choice == 1) {
-                        realValue = 1;
+                        setRealValue(1);
                         break;
                     }
                     System.out.println("Input valid answer");
                 }
                 break;
             case KING:
-                realValue = 10;
+                setRealValue(10);
                 break;
             case QUEEN:
-                realValue = 10;
+                setRealValue(10);
                 break;
             case JACK:
-                realValue = 10;
+                setRealValue(10);
                 break;
             case TWO:
-                realValue = 2;
+                setRealValue(2);
                 break;
             case THREE:
-                realValue = 3;
+                setRealValue(3);
                 break;
             case FOUR:
-                realValue = 4;
+                setRealValue(4);
                 break;
             case FIVE:
-                realValue = 5;
+                setRealValue(5);
                 break;
             case SIX:
-                realValue = 6;
+                setRealValue(6);
                 break;
             case SEVEN:
-                realValue = 7;
+                setRealValue(7);
                 break;
             case EIGHT:
-                realValue = 8;
+                setRealValue(8);
                 break;
             case NINE:
-                realValue = 9;
+                setRealValue(9);
                 break;
             case TEN:
-                realValue = 10;
+                setRealValue(10);
                 break;
         }
     }

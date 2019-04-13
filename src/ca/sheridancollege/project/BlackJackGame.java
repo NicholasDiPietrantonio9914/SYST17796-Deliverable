@@ -12,7 +12,7 @@ public class BlackJackGame extends Game {
 
     //data fields
     private GroupOfCards groupOfCards;
-    ArrayList<BlackJackPlayer> players;
+    private ArrayList<BlackJackPlayer> players;
 
     /**
      * two arg constructor that represents a game of blackjack with all players
@@ -107,8 +107,10 @@ public class BlackJackGame extends Game {
 
         if (sorting.get(players.size() - 1) == sorting.get(players.size() - 2)) {
             System.out.println("Tie game");
+            return;
         } else {
             System.out.println(players.get(winner).getPlayerID() + " wins!");
+            return;
         }
     }
 

@@ -22,7 +22,7 @@ public class Main {
         System.out.println("How many players would like to play?(2-4)");
         int playerTotal = input.nextInt();
 
-        while (playerTotal > 4 || playerTotal < 2) {
+        while (checkPlayerAmount(playerTotal)) {
             System.out.println("Enter a valid player amount.(2-4)");
             playerTotal = input.nextInt();
         }
@@ -40,6 +40,10 @@ public class Main {
 
         BlackJackGame play = new BlackJackGame(players, groupOfCards);
         play.play();
+    }
+    
+    public static boolean checkPlayerAmount(int playerTotal) {
+        return playerTotal < 2 || playerTotal > 4;
     }
 
 }
